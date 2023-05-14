@@ -28,8 +28,9 @@ export class Modal extends Component {
   }
 
   render() {
-    return createPortal(<div onClick={this.handleClose} className={css.Overlay}>
-      <div className={css.Modal}>{this.props.children}</div> {}
+    return createPortal(
+      <div onClick={this.handleClose} className={css.Overlay}>
+      <div className={css.Modal}>{this.props.children}</div> 
     </div>, modalRoot)
   }
 }
